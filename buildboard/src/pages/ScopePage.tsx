@@ -4,8 +4,6 @@ import { api } from "../../convex/_generated/api";
 import { Id } from "../../convex/_generated/dataModel";
 import { KPICard } from "@/components/dashboard/KPICard";
 import { ActivityForm } from "@/components/forms/ActivityForm";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import {
   Target,
   TrendingUp,
@@ -18,7 +16,6 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 interface ScopePageProps {
   projectId: string;

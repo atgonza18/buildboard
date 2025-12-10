@@ -267,7 +267,7 @@ function CreateUserDialog({ open: _open, onOpenChange }: CreateUserDialogProps) 
           <div className="space-y-2">
             <Label>Assign to Projects</Label>
             <div className="border rounded-md p-3 space-y-2 max-h-40 overflow-y-auto">
-              {projects.map((project) => (
+              {projects.filter((p): p is NonNullable<typeof p> => p !== null).map((project) => (
                 <label
                   key={project._id}
                   className="flex items-center gap-2 cursor-pointer hover:bg-muted p-1 rounded"
@@ -469,7 +469,7 @@ function EditUserDialog({ user, onClose }: EditUserDialogProps) {
         <div className="space-y-2">
           <Label>Assigned Projects</Label>
           <div className="border rounded-md p-3 space-y-2 max-h-40 overflow-y-auto">
-            {projects.map((project) => (
+            {projects.filter((p): p is NonNullable<typeof p> => p !== null).map((project) => (
               <label
                 key={project._id}
                 className="flex items-center gap-2 cursor-pointer hover:bg-muted p-1 rounded"

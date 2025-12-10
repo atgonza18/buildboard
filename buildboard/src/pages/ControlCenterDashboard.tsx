@@ -265,7 +265,7 @@ export function ControlCenterDashboard() {
           {projectsSummary.length > 0 ? (
             <div className="px-5 pb-4 space-y-3">
               {projectsSummary.map((project) => {
-                const projectData = projects?.find(p => p._id === project.projectId);
+                const projectData = projects?.find(p => p?._id === project.projectId);
                 const leaderboardEnabled = projectData?.leaderboardEnabled !== false; // Default true
 
                 return (

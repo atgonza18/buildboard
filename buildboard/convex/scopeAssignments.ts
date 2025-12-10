@@ -224,7 +224,7 @@ export const unassign = mutation({
 // Get all CMs available for assignment (construction_manager role)
 export const getAvailableCMs = query({
   args: { projectId: v.optional(v.id("projects")) },
-  handler: async (ctx, args) => {
+  handler: async (ctx, _args) => {
     const userId = await getAuthUserId(ctx);
     if (!userId) return [];
 

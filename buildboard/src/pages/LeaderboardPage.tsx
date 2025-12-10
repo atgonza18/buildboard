@@ -699,7 +699,7 @@ function ScopeRow({
   onToggle: () => void;
   getPFColor: (pf: number) => string;
   getPFBgColor: (pf: number) => string;
-  getVarianceBadge: (variance: number, size?: "sm" | "lg") => JSX.Element;
+  getVarianceBadge: (variance: number, size?: "sm" | "lg") => React.ReactNode;
 }) {
   const activityBreakdown = useQuery(
     api.leaderboard.getActivityBreakdown,
