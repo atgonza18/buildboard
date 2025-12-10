@@ -1,0 +1,8 @@
+{
+  "buildCommand": "cd buildboard && npm install && npm run build",
+  "outputDirectory": "buildboard/dist",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
